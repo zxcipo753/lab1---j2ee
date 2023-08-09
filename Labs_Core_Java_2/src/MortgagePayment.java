@@ -1,4 +1,4 @@
-package com.avtech.j2ee.lab2;
+//package com.avtech.j2ee.lab2;
 
 /**
     ---------------------------------------------------------------------------------------
@@ -40,6 +40,7 @@ public class MortgagePayment
 	//Calculate the monthly payment
 	//---------------------------------------------------
 	monthlyPayment = principal * (monthlyInterest / (1 - Math.pow((1 + monthlyInterest),(months * -1))));
+	
 
 
 	//screen display and prompts

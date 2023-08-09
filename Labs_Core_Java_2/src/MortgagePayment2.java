@@ -1,4 +1,4 @@
-package com.avtech.j2ee.lab2;
+//package com.avtech.j2ee.lab2;
 
 /*
 
@@ -56,7 +56,7 @@ public class MortgagePayment2
             {
                 try
                 {
-                    Thread.sleep(5000);		// pause for 1000 ms (one second)
+                    Thread.sleep(5000);		// pause for 5000 ms (one second)
                 }
                 catch (InterruptedException e)
                 {
