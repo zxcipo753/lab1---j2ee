@@ -10,6 +10,13 @@ public class MyMortgagePayment {
         // Convert to monthly values and total number of payments
         double monthlyInterestRate = ANNUAL_INTEREST_RATE / 12 / 100;
         int totalPayments = TERM_YEARS * 12;
+
+        // Define an 2-D array of 3 different types of loan details: terms and interest rates
+        double[][] diffLoans = {
+            {7, 5.35},
+            {15, 5.5},
+            {30, 5.75}
+        };
         
         // Calculate Monthly Payment using Eq. 2 provided in doc (P = L*[ c(1 + c)^n ]/[(1 + c)^n  -  1]- Eq. 2)
         double loanNumerator = LOAN_AMOUNT * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalPayments);
@@ -42,7 +49,6 @@ public class MyMortgagePayment {
             }
         }
 
-        System.out.format("\n\n\tMONTHLY MORTGAGE PAYMENT = $%.2f", monthlyPayment);
         System.out.format("\n(Based on a loan of $%,.2f for %d months at an annual rate of %4.2f%%)\n", LOAN_AMOUNT, totalPayments, ANNUAL_INTEREST_RATE);
     }
 }
