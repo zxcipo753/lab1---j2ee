@@ -1,8 +1,18 @@
-public class MyMortgagePayment {
+// For lab1.1 and lab2.1-2.3
+public class V1MortgagePayment {
 
     public static void main(String[] args) {
         // Hardcoded values
         final double LOAN_AMOUNT = 200000.00;
+
+        // Define an 2-D array of 3 different types of loan details: terms and interest rates
+        double[][] diffLoans = {
+            {7, 5.35},
+            {15, 5.5},
+            {30, 5.75}
+        };
+
+
         final int TERM_YEARS = 30;
         final double ANNUAL_INTEREST_RATE = 5.75;
         // Equal to remainingBalace -  Display the loan balance and interest for each payment
@@ -11,12 +21,8 @@ public class MyMortgagePayment {
         double monthlyInterestRate = ANNUAL_INTEREST_RATE / 12 / 100;
         int totalPayments = TERM_YEARS * 12;
 
-        // Define an 2-D array of 3 different types of loan details: terms and interest rates
-        double[][] diffLoans = {
-            {7, 5.35},
-            {15, 5.5},
-            {30, 5.75}
-        };
+        
+     
         
         // Calculate Monthly Payment using Eq. 2 provided in doc (P = L*[ c(1 + c)^n ]/[(1 + c)^n  -  1]- Eq. 2)
         double loanNumerator = LOAN_AMOUNT * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalPayments);
